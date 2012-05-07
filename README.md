@@ -1,4 +1,11 @@
 vimfiles
 ========
+My vimrc files, geared toward development. Still evolving.
 
-My vimrc files, geared toward development. Still evolving; currently contains NERDTree, Taglist, and VCSCommands.
+Plugins:
+- NERDTree
+- taglist
+- VCSCommand
+
+Colors:
+- Zenburn
