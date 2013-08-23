@@ -1,5 +1,11 @@
-"" The basics
 set nocompatible            " This isn't vi
+
+"" Pathogen
+filetype off                " Pathogen needs to run before plugin indent on
+call pathogen#incubate()
+call pathogen#helptags()    " Generate helptags
+
+"" The basics
 syntax enable
 set showcmd                 " Display incomplete commands
 filetype plugin indent on   " Load filetype plugins/indenting
@@ -37,7 +43,7 @@ set numberwidth=4               " Width of the line number column
 set scrolloff=3                 " Scroll context
 set backspace=indent,eol,start  " Better backspacing
 set diffopt+=iwhite             " Ignore whitespace-only differences
-colorscheme zenburn
+" colorscheme zenburn
 
 " Text navigation
 "
