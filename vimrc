@@ -1,15 +1,11 @@
-set number
-set ruler
+"" The basics
+set nocompatible            " This isn't vi
 syntax enable
+set showcmd                 " Display incomplete commands
+filetype plugin indent on   " Load filetype plugins/indenting
+set noswapfile              " No swapfiles in this day and age
 
-set shiftwidth=4
-set tabstop=4
-set scrolloff=3
-set numberwidth=4
-set expandtab
-set autoindent
-set backspace=indent,eol,start
-
+"" Unicode, where applicable
 if has("multi_byte")
     if &termencoding == ""
         let &termencoding = &encoding
@@ -19,8 +15,28 @@ if has("multi_byte")
     set fileencodings=ucs-bom,utf-8,latin1
 endif
 
-set showtabline=2
-set diffopt+=iwhite
+"" Whitespace
+set nowrap                  " Don't wrap lines
+set shiftwidth=4 tabstop=4  " 4 spaces per tab
+set expandtab               " Use spaces
+set autoindent              " Use indent from previous line by default
+set smartindent             " ...with some accommodation for C
+
+"" Searching
+set hlsearch                " Highlight matches
+set incsearch               " Incremental searching
+set ignorecase              " Case-insensitive searches...
+set smartcase               " ...unless there are explicit capitals
+
+"" User Interface
+set laststatus=2                " Always show the stat line
+set showtabline=2               " Always show the tab line
+set number                      " Line numbering
+set numberwidth=4               " Width of the line number column
+
+set scrolloff=3                 " Scroll context
+set backspace=indent,eol,start  " Better backspacing
+set diffopt+=iwhite             " Ignore whitespace-only differences
 colorscheme zenburn
 
 " Text navigation
@@ -36,23 +52,6 @@ nmap <silent> <C-Down> :wincmd j<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 
-" Taglist
-" 
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Compact_Format = 1
-let Tlist_File_Fold_Auto_Clost = 0
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Process_File_Always = 1
+set modeline
 
-
-map <F3> :TlistToggle<cr>
-vmap <F3> <esc>:TlistToggle<cr>
-imap <F3> <esc>:TlistToggle<cr>
-
-"NERDTree
-"
-let Tlist_Use_Right_Window = 1
-let NERDTreeShowBookmarks = 1
-map <F2> :NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
-vmap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
-imap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
+" source pluginrc
