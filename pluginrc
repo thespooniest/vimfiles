@@ -1,0 +1,28 @@
+" Powerline
+"let g:Powerline_symbols = 'fancy'
+"let g:Powerline_colorscheme = 'skwp'
+"set fillchars+=stl:\ ,stlnc:\ 
+" set t_Co=256
+
+" Taglist
+" 
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Compact_Format = 1
+let Tlist_File_Fold_Auto_Clost = 0
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Process_File_Always = 1
+let Tlist_Use_Right_Window = 1
+
+
+map <F3> :TlistToggle<cr>
+vmap <F3> <esc>:TlistToggle<cr>
+imap <F3> <esc>:TlistToggle<cr>
+
+"NERDTree
+"
+"let NERDTreeShowBookmarks = 1
+"map <F2> :NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
+"vmap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
+"imap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
+
+" vim: syntax=vim
