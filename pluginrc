@@ -1,28 +1,23 @@
-" Powerline
-"let g:Powerline_symbols = 'fancy'
-"let g:Powerline_colorscheme = 'skwp'
-"set fillchars+=stl:\ ,stlnc:\ 
-" set t_Co=256
+" vim: filetype=vim
+" Airline
+let g:airline_powerline_fonts=1
+let g:airline_theme='zenburn'
+" Built-in airline extensions
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#use_vcscommand = 1
 
-" Taglist
-" 
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Compact_Format = 1
-let Tlist_File_Fold_Auto_Clost = 0
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Use_Right_Window = 1
+" Airline plugin integration
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
 
 
-map <F3> :TlistToggle<cr>
-vmap <F3> <esc>:TlistToggle<cr>
-imap <F3> <esc>:TlistToggle<cr>
+" Tagbar
+nnoremap <F3> :TagbarToggle<cr>
+vnoremap <F3> <esc>:TagbarToggle<cr>
+inoremap <F3> <esc>:TagbarToggle<cr>
 
-"NERDTree
-"
-"let NERDTreeShowBookmarks = 1
-"map <F2> :NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
-"vmap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
-"imap <F2> <esc>:NERDTreeToggle<cr> \| :silent NERDTreeMirror<CR>
-
-" vim: syntax=vim
+" MiniBufexpl
+nnoremap <F2> :MBEToggle<cr>
+vnoremap <F2> <esc>:MBEToggle<cr>
+inoremap <F2> <esc>:MBEToggle<cr>

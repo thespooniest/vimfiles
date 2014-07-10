@@ -1,0 +1,23 @@
+" vim: filetype=vim
+
+" The all-important leader.
+let mapleader = '-'
+
+" vimrc editing
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Ctrl-Shift-L clears search
+if maparg('<C-L>', 'n') ==# ''
+    nnoremap <silent> <C-L> :nohlsearch<cr><C-L>
+endif
+
+" Window navigation
+nnoremap <silent> <C-Up> :wincmd k<CR>
+nnoremap <silent> <C-Down> :wincmd j<CR>
+nnoremap <silent> <C-Left> :wincmd h<CR>
+nnoremap <silent> <C-Right> :wincmd l<CR>
+
+" Buffer navigation
+nnoremap <silent> <C-PageUp> :bp<CR>
+nnoremap <silent> <C-PageDown> :bn<CR>

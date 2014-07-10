@@ -3,9 +3,12 @@ vimfiles
 My vimrc files, geared toward development. Still evolving.
 
 Plugins:
-- NERDTree
-- taglist
+- tagbar
 - VCSCommand
+- MiniBufExpl
+- Syntastic
+- Airline
+- Vinegar
 
 Colors:
 - Zenburn

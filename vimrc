@@ -40,33 +40,29 @@ set incsearch               " Incremental searching
 set ignorecase              " Case-insensitive searches...
 set smartcase               " ...unless there are explicit capitals
 
-" Ctrl-Shift-L clears search
-if maparg('<C-L>', 'n') ==# ''
-    nnoremap <silent> <C-L> :nohlsearch<cr><C-L>
-endif
-
 "" User Interface
 set title                       " Inject our title into the window
+set titleold="Terminal"         " No thanks for flying Vim
+set titlestring="Terminal"
 set ruler                       " Fallback for the stat line
+set cursorline                  " Highlight the current line.
 set laststatus=2                " Always show the stat line
-set showtabline=2               " Always show the tab line
-set number                      " Line numbering
-set numberwidth=4               " Width of the line number column
 set shortmess=atI               " Shorten certain messages.
 
 set scrolloff=2                 " Scroll context
 set backspace=indent,eol,start  " Better backspacing
 set diffopt+=iwhite             " Ignore whitespace-only differences
-"colorscheme zenburn
+set background=dark             " Dark terminal preferred
 
-" Window navigation
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
+" Detect Markdown correctly
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
+colorscheme zenburn
+
+" Source our sub-files.
 runtime macros
-runtime pluginrc
+runtime keysrc
 runtime quickfixrc
 runtime statuslinerc
 runtime netrwrc
+runtime pluginrc

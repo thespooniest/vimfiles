@@ -1,3 +1,4 @@
+" vim: filetype=vim
 function! GetBufferList()
     redir =>buflist
     silent! ls
@@ -25,5 +26,6 @@ function! ToggleList(bufname, pfx)
     endif
 endfunction
 
-nmap <silent><F5> :call ToggleList("Quickfix List", 'c')<CR>
-nmap <silent><F6> :call ToggleList("Location List", 'l')<CR>
+" Key bindings
+nnoremap <silent><F4> :call ToggleList("Quickfix List", 'c')<CR>
+nnoremap <silent><F5> :call ToggleList("Location List", 'l')<CR>
