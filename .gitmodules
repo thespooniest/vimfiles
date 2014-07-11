@@ -4,3 +4,18 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/base16-vim"]
+	path = bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim
+[submodule "bundle/vim-plugin-minibufexpl"]
+	path = bundle/vim-plugin-minibufexpl
+	url = https://github.com/techlivezheng/vim-plugin-minibufexpl
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "bundle/vim-vinegar"]
+	path = bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
