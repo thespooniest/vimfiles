@@ -10,6 +10,7 @@ let g:airline#extensions#branch#use_vcscommand = 1
 " Airline plugin integration
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#minibufexpl#enabled = 1
 
 
 " Tagbar
