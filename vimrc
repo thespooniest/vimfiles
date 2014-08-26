@@ -67,14 +67,10 @@ set diffopt+=iwhite             " Ignore whitespace-only differences
     endif
 
     " Window navigation
-    nnoremap <silent> <C-Up> :wincmd k<CR>
-    nnoremap <silent> <C-Down> :wincmd j<CR>
-    nnoremap <silent> <C-Left> :wincmd h<CR>
-    nnoremap <silent> <C-Right> :wincmd l<CR>
-
-    " Buffer navigation
-    nnoremap <silent> <C-PageUp> :bp<CR>
-    nnoremap <silent> <C-PageDown> :bn<CR>
+    nnoremap <silent> <C-J> :bnext<CR>
+    nnoremap <silent> <C-K> :bprev<CR>
+    nnoremap <silent> <C-L> :tabnext<CR>
+    nnoremap <silent> <C-H> :tabprev<CR>
 
     " Arrow key training
     nnoremap <up> <nop>
