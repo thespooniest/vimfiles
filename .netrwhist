@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/public/htdocs/liburu.cit.nih.gov/playground/prototype/includes/filerepo/file'
+let g:netrw_dirhist_2='/public/htdocs/liburu.cit.nih.gov/playground/prototype/extensions'
+let g:netrw_dirhist_3='/public/htdocs/liburu.cit.nih.gov/playground/prototype/extensions/HSPPCustomOntology'
+let g:netrw_dirhist_4='/public/htdocs/liburu.cit.nih.gov/playground/prototype/extensions/HSPPCustomOntology/js'
+let g:netrw_dirhist_5='/public/htdocs/liburu.cit.nih.gov/playground/prototype/extensions/HSPPOntologyLookup'
+let g:netrw_dirhist_6='/public/htdocs/liburu.cit.nih.gov/playground/prototype/extensions/HSPPOntologyLookup/js'

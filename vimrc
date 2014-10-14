@@ -28,6 +28,9 @@ if has("multi_byte")
     setglobal fileencoding=utf-8
     set fileencodings=ucs-bom,utf-8,latin1
 endif
+
+" Terminal colors
+set t_Co=256
 " }}}
 " Whitespace {{{
 set nowrap                  " Don't wrap lines
@@ -157,7 +160,7 @@ set background=dark             " Dark terminal preferred
     " }}}
     " Airline {{{
     let g:airline_powerline_fonts=1
-    let g:airline_theme='zenburn'
+    let g:airline_theme='luna'
     " Built-in airline extensions
     let g:airline#extensions#branch#enabled = 1
     let g:airline#extensions#branch#enabled = 1
@@ -166,7 +169,6 @@ set background=dark             " Dark terminal preferred
     " Airline plugin integration
     let g:airline#extensions#syntastic#enabled = 1
     let g:airline#extensions#tagbar#enabled = 1
-    let g:airline#extensions#minibufexpl#enabled = 1
     " }}}
     " Tagbar {{{
     nnoremap <F3> :TagbarToggle<cr>
@@ -174,12 +176,19 @@ set background=dark             " Dark terminal preferred
     inoremap <F3> <esc>:TagbarToggle<cr>
     " }}}
     " MiniBufexpl {{{
-    nnoremap <F2> :MBEToggle<cr>
-    vnoremap <F2> <esc>:MBEToggle<cr>
-    inoremap <F2> <esc>:MBEToggle<cr>
+    "nnoremap <F2> :MBEToggle<cr>
+    "vnoremap <F2> <esc>:MBEToggle<cr>
+    "inoremap <F2> <esc>:MBEToggle<cr>
+    " }}}
+    " bufexplorer {{{
+    let g:BufExplorerSortBy='number'
+    nnoremap <F2> :BufExplorerVerticalSplit<cr>
+    vnoremap <F2> <esc>:BufExplorerVerticalSplit<cr>
+    inoremap <F2> <esc>:BufExplorerVerticalSplit<cr>
+    " }}}
+    " promptline {{{
     " }}}
 " }}}
 " Source our sub-files.
 runtime macros
-runtime keysrc
 " vim:foldmethod=marker:foldlevel=0

@@ -22,3 +22,12 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "bundle/bufexplorerjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"]
+	path = bundle/bufexplorerjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "bundle/promptline.vim"]
+	path = bundle/promptline.vim
+	url = https://github.com/edkolev/promptline.vim
